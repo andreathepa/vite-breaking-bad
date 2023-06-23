@@ -11,7 +11,7 @@ export default {
 </script>
 <template lang="">
   <div>
-    <AppHeader title="Pokedex"/>
+    <AppHeader  class="text-light" title="Pokedex"/>
     <AppPokemonList />
   </div>
 </template>

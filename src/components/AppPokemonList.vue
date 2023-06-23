@@ -22,7 +22,7 @@ export default {
 <template lang="">
     <div>
         <div class="container bg-white p-5 rounded-5">
-            <div class="row justify-content-center height overflow-auto p-2 bg-secondary rounded-5">
+            <div class="row justify-content-center height overflow-auto p-2 bg-secondary">
                 <div v-for="(pokemon,index) in pokemonList" :key="pokemon.name" class="col-sm-6 col-md-3">
                     <AppPokemon :myPokemon="pokemon"/>
                 </div>
@@ -32,7 +32,7 @@ export default {
 </template>
 <style lang="scss" scoped>
     .height{
-        height: 420px;
+        height: 491px;
 
     }
 </style>
