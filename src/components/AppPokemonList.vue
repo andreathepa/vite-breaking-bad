@@ -1,6 +1,6 @@
 <script>
-import axios from 'axios';
 import AppPokemon from './AppPokemon.vue';
+import { store } from '../store.js';
 
 export default {
     components:{
@@ -8,14 +8,9 @@ export default {
     },
     data(){
         return{
-            pokemonList: []
+          store
         }
     
-    },
-    mounted(){
-        axios.get('https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?per=12').then((response) => {
-            this.pokemonList = response.data.docs;
-        })
     } 
 }
 </script>
@@ -23,7 +18,7 @@ export default {
     <div>
         <div class="container bg-white p-5 rounded-5">
             <div class="row justify-content-center height overflow-auto p-2 bg-secondary">
-                <div v-for="(pokemon,index) in pokemonList" :key="pokemon.name" class="col-sm-6 col-md-3">
+                <div v-for="(pokemon,index) in store.pokemonList" :key="pokemon.name" class="col-sm-12 col-md-6 col-lg-3">
                     <AppPokemon :myPokemon="pokemon"/>
                 </div>
             </div>

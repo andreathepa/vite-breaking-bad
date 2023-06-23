@@ -35,13 +35,13 @@ export default {
 }
 
     .green {
-        background-color: rgba(62, 211, 87, 0.39)    }
+        background-color: rgba(39, 250, 74, 0.39)    }
 
     .red {
-        background-color: rgb(221, 40, 40);
+        background-color: rgb(221, 121, 40);
     }
 
     .blue {
-        background-color: rgb(36, 36, 194);
+        background-color: rgb(82, 128, 228);
     } 
 </style>
