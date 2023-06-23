@@ -6,7 +6,7 @@ export default {
 }
 </script>
 <template lang="">
-    <div class="text-center my-2 mx-2 p-3 rounded-3 bg-white pokemon_list border">
+    <div class="text-center my-2 mx-2 p-3 rounded-3 pokemon_list border" :class="myPokemon.type1 === 'Grass'? 'green' : myPokemon.type1 === 'Water' ? 'blue' : myPokemon.type1 === 'Fire'? 'red': ''">
         <div class="row flex-column">
             <div class="col">
                 <div class="content_img"><img :src="myPokemon.imageUrl" class="img-fluid mb-2 circular" alt="myPokemon.info"></div>
@@ -33,4 +33,15 @@ export default {
 .circular img {
     width:100%;
 }
+
+    .green {
+        background-color: rgba(62, 211, 87, 0.39)    }
+
+    .red {
+        background-color: rgb(221, 40, 40);
+    }
+
+    .blue {
+        background-color: rgb(36, 36, 194);
+    } 
 </style>
