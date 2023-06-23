@@ -11,10 +11,10 @@ export default {
 </script>
 <template lang="">
   <div>
-    <AppHeader />
+    <AppHeader title="Pokedex"/>
     <AppPokemonList />
   </div>
 </template>
-<style lang="">
-  
+<style lang="scss">
+  @use './styles/generals.scss' as *;
 </style>
