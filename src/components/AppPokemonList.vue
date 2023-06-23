@@ -21,15 +21,18 @@ export default {
 </script>
 <template lang="">
     <div>
-        <div class="container">
-            <div class="row">
-                <div v-for="(pokemon,index) in pokemonList" :key="pokemon.name" class="col-sm-6 col-md-4 border">
+        <div class="container bg-white p-5 rounded-5">
+            <div class="row justify-content-center height overflow-auto p-2 bg-secondary rounded-5">
+                <div v-for="(pokemon,index) in pokemonList" :key="pokemon.name" class="col-sm-6 col-md-3">
                     <AppPokemon :myPokemon="pokemon"/>
                 </div>
             </div>
         </div>
     </div>
 </template>
-<style lang="">
-    
+<style lang="scss" scoped>
+    .height{
+        height: 420px;
+
+    }
 </style>
