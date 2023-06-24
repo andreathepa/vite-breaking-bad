@@ -14,13 +14,14 @@ export default {
     },
     data(){
         return{
-          store
+          store,
         }
     
     },
     mounted(){
         axios.get(store.apiUrl).then((response) => {
             store.pokemonList = response.data.docs;
+            store.loading = false;
         })
     }
 }
@@ -29,7 +30,6 @@ export default {
   <div>
     <AppHeader  class="text-light" title="Pokedex"/>
     <AppPokemonList />
-    <AppLoader />
   </div>
 </template>
 <style lang="scss">
